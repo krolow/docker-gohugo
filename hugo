@@ -1,0 +1,21 @@
+#!/bin/bash
+
+volume=$(pwd)
+arg="${@:1}"
+
+# when is a folder first argument set that as volume and second as arg
+if [ -d "$1" ]; then
+  arg="${@:2}"
+  volume=$1
+fi
+
+if [ "$arg" == "" ]; then
+  arg="serve --bind=0.0.0.0"
+fi
+
+if [ "$1" == "serve" ] || [ "$2" == "serve" ]; then
+  arg="$arg --bind=0.0.0.0"
+fi
+
+
+docker run --rm -p 1313:1313 -v $volume:/root/hugo krolow/gohugo $arg
