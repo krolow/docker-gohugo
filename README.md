@@ -31,7 +31,7 @@ hugo /home/krolow/myproject/ serve -w
 
 ## License
 
-Licensed under <a href="http://krolow.mit-license.org/">The MIT License</a>
+Licensed under [The MIT License](http://krolow.mit-license.org/)
 Redistributions of files must retain the above copyright notice.
 
 ## Author
