@@ -1,6 +1,6 @@
 # docker-gohugo
 
-Docker image for [hugo static site generator](http://gohugo.io)
+Docker image for [hugo static site generator](http://gohugo.io) based on [alpine](http://www.alpinelinux.org/).
 
 #### Run docker image
 ```
