@@ -22,6 +22,13 @@ or can point out the folder
 hugo /home/krolow/myproject/ serve -w
 ```
 
+### Features
+
+* [Highlight support by Pygments](https://gohugo.io/extras/highlighting/)
+* Bash (if you want to write inside docker)
+* Hugo script to exec as it was directly in host
+
+
 ## License
 
 Licensed under <a href="http://krolow.mit-license.org/">The MIT License</a>
