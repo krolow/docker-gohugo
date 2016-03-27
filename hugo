@@ -9,13 +9,17 @@ if [ -d "$1" ]; then
   volume=$1
 fi
 
+port=""
+
 if [ "$arg" == "" ]; then
   arg="serve --bind=0.0.0.0"
+  port="-p 1313:1313"
 fi
 
 if [ "$1" == "serve" ] || [ "$2" == "serve" ]; then
   arg="$arg --bind=0.0.0.0"
+  port="-p 1313:1313"
 fi
 
 
-docker run --rm -p 1313:1313 -v $volume:/root/hugo krolow/gohugo $arg
+docker run --rm $port -v $volume:/root/hugo krolow/gohugo $arg
