@@ -2,7 +2,9 @@ FROM alpine:3.1
 MAINTAINER Vinícius Krolow <krolow@gmail.com> (@krolow)
 
 RUN apk update
-RUN apk add curl bash tar && rm -rf /var/cache/apk/*
+RUN apk add curl bash tar python py-pip && rm -rf /var/cache/apk/*
+
+RUN pip install Pygments
 
 ENV HUGO_VERSION 0.15
 
